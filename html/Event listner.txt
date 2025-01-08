@@ -1,0 +1,5 @@
+onchange : An HTML element has been changed
+onclick : The user clicks an HTML element
+onmouseover : The user moves the mouse over an HTML element
+onmouseout : the user moves the mouse away an HTML element
+onkeydown : the user pushes a keyboard key

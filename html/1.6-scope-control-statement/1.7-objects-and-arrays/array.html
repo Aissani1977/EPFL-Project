@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in JS</title>
+</head>
+<body>
+    <h2>Arrays in JS</h2>
+
+    <script>
+        
+        //Array can keep more than one similar or non-similar items
+        let ageArray = [23, 34, 56, 32]; // array of similar items
+        let names = ["John", "Peter", "Jane"];
+        let salaries = [5687.34, 6868.32, 6868.10];
+        let randomArray = [12, "Peter", 5645.99]; // array of non similar items
+
+        console.log(salaries);
+        //console.log(typeof (salaries));
+        console.log(salaries.length);
+        salaries = salaries.sort();
+        console.log("****salaries after sorting*****");
+        console.log(salaries);
+        salaries.push(888888.88);// add item 
+        console.log(salaries);
+
+        //salaries.splice(salaries.length-1, 1);//remove the last item from a array
+        //console.log(salaries);
+
+        console.log("****salaries after addition****");
+        console.log(salaries.splice(0, 2, 777, 888)); // delete item from 0 to 1, 2 not include and add item 777, 888 instead
+        console.log(salaries);
+
+        console.log("****salaries after deletion****");
+        console.log(salaries.splice(0, 2)); // delete item from 0 to 1, 2 not include
+        console.log(salaries);
+
+
+        
+        console.log(randomArray[2]); // gives item at 2nd item
+    
+        //let deptArray = new Array(4); //it will create 4 empty
+        let deptArray = new Array("Phy", "Chem", "Maths"); // will create array with 3 items
+
+        console.log(deptArray);
+        console.log(typeof (deptArray));// Array in JS is type object
+        
+        let students1 = {
+            name: "Peter" ,
+            rollNo: 567,
+            age: 23
+        };
+
+        let students2 = {
+            name: "John" ,
+            rollNo: 123,
+            age: 33
+        };
+
+        let students = [students1, students2 ];// Array of objects
+        console.log(students);
+    
+    </script>
+    
+</body>
+</html>

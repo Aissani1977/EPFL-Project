@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function(ES6)</title>
+</head>
+<body>
+    <h2>Arrow function is a shortcut way of yritting the normal javascript function in JS</h2>
+  
+    <script>
+        function add1(num1, num2){
+            return num1+num2;
+        }
+        let result = add1(3, 4);
+        console.log(result);
+
+        const add2 = function (num1, num2){
+            return num1+num2
+        };
+        result = add2(31, 4);
+        console.log(result);
+
+       /* const add3 = (num1, num2)=>{
+            return num1+num2;
+        };*/
+
+        const add3 = (num1, num2)=>num1+num2;
+        result = add3(10, 4);
+        console.log(result);
+
+        /*const sqFunction = function(a) {
+            return a*a;
+        }*/
+
+        /*const sqFunction = (a) => {
+            return a*a;
+        }*/
+
+        //const sqFunction = (a) => a*a;
+        const sqFunction = a => a*a;// this is only done if there is 1 parameter function
+        console.log(sqFunction(8));
+
+        const sqFunction2 = (a, b) => a*b;// this is only done if there is 2 parameter function
+        console.log(sqFunction2(8, 2));
+
+        const sayHello = () => console.log("Hello World!");
+        sayHello();
+
+        setInterval(function test(){
+            console.log("After 2 secs");
+        }, 2000);
+        setInterval(() =>{console.log("After 2 secs")}, 2000);
+        setInterval(() =>console.log("After 2 secs"), 2000);
+    </script>
+</body>
+</html>

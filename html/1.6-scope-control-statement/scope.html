@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope in JS</title>
+</head>
+<body>
+    <h2>Scope of variables in JS</h2>
+
+    <script>
+        //If  we declare variables directly inside script tag than it takes global scope
+        var name = "Peter";
+        var name = "Jog"; // variable re-declaration with var keyword does not give error in JS
+        console.log(name);
+
+        function f1(){
+            var name = "Jane"; // this will take local scope of the function
+            console.log(name);
+        }
+        //console.log(" Your name is " + name);
+        f1()
+        let output = "Hello";
+        //let output = "Hello2"; // let will not allow redeclaration of same variable
+        function f2() {
+            let output = "New Hello";// but let will allow redeclaration inside a function or any block
+            console.log(output);
+        }
+        f2()
+
+        const finalVal = "this cannot be modified, as its a constant";
+        console.log(finalVal);
+    </script>
+
+
+    
+</body>
+</html>
